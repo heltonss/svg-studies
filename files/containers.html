@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containers SVG</title>
+</head>
+<body>
+    <h1>Elementos containers</h1>
+    <h2>Defs</h2>
+    <svg style="border: solid 1px red;">
+        <defs>
+            <circle id="my-circle" r="25" cx="150" cy="50" />
+        </defs>
+
+        <use xlink:href="#my-circle" />
+        <use xlink:href="#my-circle" x="80" fill="red" />
+    </svg>
+    <h2>g</h2>
+    <svg style="border: solid 1px red;">
+        <g fill="green">
+            <circle id="my-circle" r="25" cx="150" cy="50" />
+            <circle id="my-circle" r="25" cx="240" cy="50" />
+        </g>
+    </svg>
+    <h2>Symbol</h2>
+    <svg style="border: solid 1px red;">
+        <symbol id="my-symbol" viewBox="0 0 250 75">
+            <circle  fill="yellow" r="25" cx="150" cy="50" />
+        </symbol>
+
+        <use xlink:href="#my-symbol" />
+    </svg>
+</body>
+</html>◊

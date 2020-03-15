@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilizando svg com css</title>
+  </head>
+  <body>
+    <h1>Estilizando o svg com css</h1>
+    <section>
+      <h2>Estilo inline</h2>
+
+      <svg style="width: 300; height:300;" viewBox="0 0 300 300">
+        <polygon
+          style="fill: green; stroke: #ED1C24; stroke-width: 5;"
+          points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "
+        />
+      </svg>
+    </section>
+    <section>
+      <h2>Estilo dentro do svg</h2>
+
+      <svg style="width: 300; height:300;" viewBox="0 0 300 300">
+        <style>
+          polygon {
+            fill: yellow;
+            stroke: #ed1c24;
+            stroke-width: 10;
+          }
+        </style>
+        <polygon
+          points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "
+        />
+      </svg>
+    </section>
+    <section>
+      <h2>Estilo fora do svg</h2>
+      <style>
+        .star {
+          fill: pink;
+          stroke: black;
+          stroke-width: 10;
+        }
+      </style>
+
+      <svg style="width: 300; height:300;" viewBox="0 0 300 300">
+        <polygon
+          class="star"
+          points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "
+        />
+      </svg>
+    </section>
+    <section>
+      <h2>Estilo externo</h2>
+      <?xml-stylesheet type="text/css" href="css/main.css"?>
+      <svg width="300" height="300" viewBox="0 0 300 300">
+        <polygon
+          id="star-external"
+          points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "
+        />
+      </svg>
+    </section>
+  </body>
+</html>
