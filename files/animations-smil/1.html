@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise ONE</title>
+  </head>
+  <body>
+    <svg width="500" height="350">
+      <circle id="circ" r="30" cx="50" cy="50" fill="red" />
+      <rect id="rect" width="50" height="50" x="50" y="250" fill="yellow" />
+      <animate
+        xlink:href="#circ"
+        attributeName="cx"
+        from="50"
+        to="450"
+        dur="3s"
+        begin="click"
+        fill="freeze"
+        id="animaCircle"
+      />
+      <animate
+        xlink:href="#rect"
+        attributeName="x"
+        from="50"
+        to="450"
+        dur="3s"
+        begin="animaCircle.begin + 1s"
+        fill="freeze"
+      />
+    </svg>
+  </body>
+</html>
